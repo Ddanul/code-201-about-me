@@ -84,8 +84,11 @@ function checkNumber() {
       break;
     } else if (isNaN(newAnswer)) {
       alert('That wasn\'t even a number! Get with it, ' + userName + '! You have ' + (3 - x) + ' tries left!');
-    } else {
-      alert('Nope! You have ' + (3 - x) + ' tries left!');
+    } else if(parseInt(newAnswer)>compare[i]){
+      alert('Too High! You have ' + (3 - x) + ' tries left!');
+      console.log('The current score is: ' + score);
+    } else{
+      alert('Too Low! You have ' + (3 - x) + ' tries left!');
       console.log('The current score is: ' + score);
     }
   }
